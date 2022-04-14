@@ -1,6 +1,6 @@
 const request = require ("request");
 
-const fetcher = function(breedName) {
+const fetchBreedDescription = function(breedName) {
   let url = `https://api.thecatapi.com/v1/breeds/search?q=${breedName}`;
 request(url, (error, response,body) => {
   if (error) {
@@ -18,11 +18,5 @@ request(url, (error, response,body) => {
 
 //API Key '89f438d3-c889-4e90-aee3-ead8f0ee00eb'
 /////
-fetchBreedDescription('Siberian', (error, description) => {
 
-});
-
-/////
-const fetchBreedDescription = function(breedName, callback) {
-
-};
+module.exports = {fetcher}
